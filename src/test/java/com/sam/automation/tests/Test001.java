@@ -1,5 +1,6 @@
 package com.sam.automation.tests;
 
+import net.serenitybdd.junit.runners.SerenityParameterizedRunner;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
@@ -14,7 +15,7 @@ import com.sam.automation.tools.AbstractTest;
 
 
 
-@RunWith(SerenityRunner.class)
+@RunWith(SerenityParameterizedRunner.class)
 public class Test001 extends AbstractTest {
 
 	@Managed()

@@ -5,6 +5,7 @@ package com.sam.automation.pages;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
+
 	public class Test1Page extends AbstractPage {
 
 		@Managed
@@ -30,14 +31,14 @@ import org.openqa.selenium.WebDriver;
 			System.out.println("test2");
 		}
 		
-		public void test3() {
+		public void test3(String ip1) {
 			System.out.println("test3");
-			getDriver().findElement(org.openqa.selenium.By.xpath("//tbody//tr//td[9]//td[8]"));
+			getDriver().findElement(org.openqa.selenium.By.xpath("//nav//ul[@class='pl-xs-0']//li//a[contains(text(),'"+ip1+"')]"));
 		}
 		
 		public void test4() {
 			boolean found=false;
-			Assert.assertTrue(found);
+			Assert.assertTrue("should fail",found);
 		}
 		
 }

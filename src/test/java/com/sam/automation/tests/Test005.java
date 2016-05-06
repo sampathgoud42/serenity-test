@@ -7,6 +7,7 @@ import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.annotations.Title;
 import net.thucydides.core.pages.Pages;
+import net.thucydides.junit.annotations.UseTestDataFrom;
 
 import org.junit.Ignore;
 import org.junit.Test;
@@ -18,6 +19,7 @@ import com.sam.automation.steps.Test1Steps;
 
 
 @RunWith(SerenityRunner.class)
+@UseTestDataFrom(value = "csv/test03.csv", separator = ',')
 public class Test005 extends TestCase {
 
     @Steps
@@ -27,7 +29,7 @@ public class Test005 extends TestCase {
     @Managed(uniqueSession = true)
     public WebDriver driver;
     public Pages pages;
-
+    String ip1, ip2, ip3, ip4;
 
     @Test
     @Ignore
@@ -36,7 +38,7 @@ public class Test005 extends TestCase {
     	
 
     	test1Steps.navigateToUrl(url);
-    	test1Steps.test3();
+    	test1Steps.test3(ip2);
    
     }
     

@@ -16,14 +16,14 @@ import com.sam.automation.steps.Test1Steps;
 
 
 
-@RunWith(SerenityRunner.class)
+@RunWith(SerenityParameterizedRunner.class)
 public class Test002 extends TestCase {
 
     @Steps
     private Test1Steps test1Steps;
 
     String url="https://www.google.ie";
-    @Managed(uniqueSession = true)
+    @Managed(uniqueSession = false)
     public WebDriver driver;
     public Pages pages;
 

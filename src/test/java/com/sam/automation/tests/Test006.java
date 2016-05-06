@@ -28,16 +28,16 @@ public class Test006 extends TestCase {
     @Managed(uniqueSession = true)
     public WebDriver driver;
     public Pages pages;
-
+    String ip1, ip2, ip3, ip4;
 
     @Test
-    @Pending
+    @Ignore
     @Title("Test006 Pending")
     public void test_006() {
     	
 
     	test1Steps.navigateToUrl(url);
-    	test1Steps.test3();
+    	test1Steps.test3(ip1);
    
     }
     

@@ -25,8 +25,8 @@ import com.sam.automation.pages.Test1Page;
 		}
 		
 		@Step("Step3 ERROR always")
-		public void test3() {
-			test1Page.test3();
+		public void test3(String ip1) {
+			test1Page.test3(ip1);
 		}
 		
 		@Step("Step4 FAILURE always")

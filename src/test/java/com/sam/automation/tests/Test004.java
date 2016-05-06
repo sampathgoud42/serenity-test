@@ -16,7 +16,7 @@ import com.sam.automation.steps.Test1Steps;
 
 
 
-@RunWith(SerenityRunner.class)
+@RunWith(SerenityParameterizedRunner.class)
 public class Test004 extends TestCase {
 
     @Steps
